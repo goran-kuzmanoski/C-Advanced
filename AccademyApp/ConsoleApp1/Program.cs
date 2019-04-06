@@ -96,7 +96,7 @@ namespace ConsoleApp1
                             string addOption = Console.ReadLine();
                             while (addOption == "1")
                             {
-
+                                //adding trainer
                                 Console.WriteLine("Enter trainer first name:");
                                 string trainerName = Console.ReadLine();
                                 Console.WriteLine("Enter trainer last name:");
@@ -112,7 +112,7 @@ namespace ConsoleApp1
                                 string addTrainerCheck = Console.ReadLine().ToLower();
                                 if (addTrainerCheck == "n")
                                 {
-                                    Console.WriteLine("Thank you for adding trainer");
+                                    Console.WriteLine("Thank you for adding new trainer");
                                     break;
                                 }
                                 else
@@ -122,7 +122,7 @@ namespace ConsoleApp1
                             }
                             while (addOption == "2")
                             {
-
+                                //adding admin
                                 Console.WriteLine("Enter admin first name:");
                                 string adminName = Console.ReadLine();
                                 Console.WriteLine("Enter admin last name:");
@@ -138,7 +138,7 @@ namespace ConsoleApp1
                                 string addAdminCheck = Console.ReadLine().ToLower();
                                 if (addAdminCheck == "n")
                                 {
-                                    Console.WriteLine("Thank you for adding admin");
+                                    Console.WriteLine("Thank you for adding new admin");
                                     break;
                                 }
                                 else
@@ -260,8 +260,8 @@ namespace ConsoleApp1
                             }
                             Console.WriteLine($"-----------------------");
                             Console.WriteLine($"Do you want to choose another person(admin,trainer or student to add) Y/N");
-                            string x = Console.ReadLine().ToLower();
-                            if (x == "n")
+                            string addMorePeople = Console.ReadLine().ToLower();
+                            if (addMorePeople == "n")
                             {
                                 Console.WriteLine("You choose not to add more people");
                                 break;
@@ -279,6 +279,7 @@ namespace ConsoleApp1
 
                             while (removeOption == "1")
                             {
+                                //remove trainer
                                 Console.WriteLine("Please enter the username of the trainer you want to remove:");
                                 foreach (var user in users.Where(u => u.Role == Role.Trainer))
                                 {
@@ -295,8 +296,8 @@ namespace ConsoleApp1
                                 else
                                 {
                                     Console.WriteLine("There was no such user!");
-                                    Console.ReadLine();
-                                    break;
+                                    Console.WriteLine("Please try again");
+                                    continue;
                                 }
                                 Console.WriteLine($"-----------------------");
                                 Console.WriteLine($"Do you want to remove another trainer Y/N");
@@ -313,6 +314,7 @@ namespace ConsoleApp1
                             }
                             while (removeOption == "2")
                             {
+                                //remove admin
                                 Console.WriteLine("Please enter the username of the admin you want to remove:");
                                 foreach (var user in users.Where(u => u.Role == Role.Admin))
                                 {
@@ -329,7 +331,8 @@ namespace ConsoleApp1
                                 else
                                 {
                                     Console.WriteLine("There was no such user!");
-                                    break;
+                                    Console.WriteLine("Please try again");
+                                    continue;
                                 }
                                 Console.WriteLine($"-----------------------");
                                 Console.WriteLine($"Do you want to remove another Admin Y/N");
@@ -346,6 +349,7 @@ namespace ConsoleApp1
                             }
                             while (removeOption == "3")
                             {
+                                //remove student
                                 Console.WriteLine("Please enter the username of the student you want to remove:");
                                 foreach (var user in users.Where(u => u.Role == Role.Student))
                                 {
@@ -362,14 +366,16 @@ namespace ConsoleApp1
                                 else
                                 {
                                     Console.WriteLine("There was no such user!");
-                                    break;
+                                    Console.WriteLine("Please try again");
+                                    continue;
                                 }
+
+                                Console.WriteLine($"-----------------------");
+                                Console.WriteLine($"Do you want to remove another student from this list: Y/N");
                                 foreach (var user in users.Where(u => u.Role == Role.Student))
                                 {
                                     Console.WriteLine($"Student first name: {user.Firstname} , Student last name: {user.Lastname}");
                                 }
-                                Console.WriteLine($"-----------------------");
-                                Console.WriteLine($"Do you want to remove another student Y/N");
                                 string removeStudent = Console.ReadLine().ToLower();
                                 if (removeStudent == "n")
                                 {
@@ -398,7 +404,7 @@ namespace ConsoleApp1
 
                         }
                         Console.WriteLine($"-----------------------");
-                        Console.WriteLine($"Do you want to logout Y/N");
+                        Console.WriteLine($"Do you want to logout as admin Y/N");
                         string logOut = Console.ReadLine().ToLower();
                         if (logOut == "y")
                         {
@@ -412,7 +418,7 @@ namespace ConsoleApp1
                     }
 
                     #endregion
-                    #region Trainer
+                #region Trainer
 
                     if (User.Role == Role.Trainer)
                     {
@@ -466,7 +472,7 @@ namespace ConsoleApp1
                                 Console.WriteLine($"Name of the subject: {subject.Name} ({studentsOfSubject}).");
                             }
                             Console.WriteLine($"-----------------------");
-                            Console.WriteLine($"Do you want to back one step  Y/N");
+                            Console.WriteLine($"Do you want to go back one step  Y/N");
                             string back = Console.ReadLine().ToLower();
                             if (back == "y")
                             {
@@ -494,7 +500,7 @@ namespace ConsoleApp1
                     }
 
                     #endregion
-                    #region User
+                #region User
                     if (User.Role == Role.Student)
                     {
                         Student student = (Student)User;
@@ -518,7 +524,8 @@ namespace ConsoleApp1
                                 {
                                     Subject sub = Subjects.FirstOrDefault(x => x.Name == chosenSubject);
                                     student.Enroll(sub);
-                                    Console.WriteLine($"You enroled in {chosenSubject}!");
+                                    //Subjects.Remove(subject);
+                                    Console.WriteLine($"You enroled in {sub.Name}!");
                                 }
 
                             }
