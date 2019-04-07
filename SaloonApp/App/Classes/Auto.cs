@@ -8,13 +8,13 @@ namespace App.Classes
 {
     abstract public class Auto
     {
-        public abstract AutoType AutoType { get; set; }
-        public abstract Manufacturer Manufacturer { get; set; }
-        public abstract string Model { get; set; }
-        public abstract Gas Gas { get; set; }
-        public abstract int Doors { get; set; }
-        public abstract double Consumption { get; set; }
-        public abstract int Price { get; set; }
+        public  AutoType AutoType { get; set; }
+        public  Manufacturer Manufacturer { get; set; }
+        public  string Model { get; set; }
+        public  Gas Gas { get; set; }
+        public  int Doors { get; set; }
+        public  double Consumption { get; set; }
+        public  int Price { get; set; }
 
         public virtual string PrintCharacteristics()
         {

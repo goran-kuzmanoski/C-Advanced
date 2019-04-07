@@ -21,30 +21,34 @@ namespace App.Classes
             Console.WriteLine($"Withhin this range {min} - {max}  you can buy:");
             foreach (Auto Auto in Autos)
             {
-                if (Auto.Manufacturer == Manufacturer.Audi)
-                {
-                    Audi auto = (Audi)Auto;
-                    if (auto.Price <= max && auto.Price >= min)
-                    {
-                        Console.Write(auto.PrintCharacteristics()+"\n");
+                if (Auto.Price <= max && Auto.Price >= min)
+                   {
+                        Console.Write(Auto.PrintCharacteristics()+"\n");
                     }
-                }
-                if (Auto.Manufacturer == Manufacturer.BMW)
-                {
-                    BMW auto = (BMW)Auto;
-                    if (auto.Price <= max && auto.Price >= min)
-                    {
-                        Console.Write(auto.PrintCharacteristics() + "\n");
-                    }
-                }
-                if (Auto.Manufacturer == Manufacturer.Opel)
-                {
-                    Opel auto = (Opel)Auto;
-                    if (auto.Price <= max && auto.Price >= min)
-                    {
-                        Console.Write(auto.PrintCharacteristics() + "\n");
-                    }
-                }
+                //if (Auto.Manufacturer == Manufacturer.Audi)
+                //{
+                //    Audi auto = (Audi)Auto;
+                //    if (auto.Price <= max && auto.Price >= min)
+                //    {
+                //        Console.Write(auto.PrintCharacteristics()+"\n");
+                //    }
+                //}
+                //if (Auto.Manufacturer == Manufacturer.BMW)
+                //{
+                //    BMW auto = (BMW)Auto;
+                //    if (auto.Price <= max && auto.Price >= min)
+                //    {
+                //        Console.Write(auto.PrintCharacteristics() + "\n");
+                //    }
+                //}
+                //if (Auto.Manufacturer == Manufacturer.Opel)
+                //{
+                //    Opel auto = (Opel)Auto;
+                //    if (auto.Price <= max && auto.Price >= min)
+                //    {
+                //        Console.Write(auto.PrintCharacteristics() + "\n");
+                //    }
+                //}
 
             }
         }

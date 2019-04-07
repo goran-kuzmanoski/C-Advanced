@@ -8,13 +8,13 @@ namespace App.Classes
 {
     public class Opel : Auto
     {
-        public override string Model { get; set; }
-        public override Manufacturer Manufacturer { get; set; }
-        public override AutoType AutoType { get; set; }
-        public override int Doors { get; set; }
-        public override Gas Gas { get; set; }
-        public override double Consumption { get; set; }
-        public override int Price { get; set; }
+        //public override string Model { get; set; }
+        //public override Manufacturer Manufacturer { get; set; }
+        //public override AutoType AutoType { get; set; }
+        //public override int Doors { get; set; }
+        //public override Gas Gas { get; set; }
+        //public override double Consumption { get; set; }
+        //public override int Price { get; set; }
         public string CountryOfOrigin { get; set; }
 
 
@@ -33,7 +33,7 @@ namespace App.Classes
 
         public override string PrintCharacteristics()
         {
-            return (base.PrintCharacteristics() + this.CountryOfOrigin);
+            return (base.PrintCharacteristics() + " , Country of origin:" +this.CountryOfOrigin +".");
         }
 
     }
