@@ -1,0 +1,7 @@
+Z:\C# Advanced\AdvancedC#\Class8\Class_8\bin\Debug\Class_8.exe.config
+Z:\C# Advanced\AdvancedC#\Class8\Class_8\bin\Debug\Class_8.exe
+Z:\C# Advanced\AdvancedC#\Class8\Class_8\bin\Debug\Class_8.pdb
+Z:\C# Advanced\AdvancedC#\Class8\Class_8\obj\Debug\Class_8.csprojAssemblyReference.cache
+Z:\C# Advanced\AdvancedC#\Class8\Class_8\obj\Debug\Class_8.csproj.CoreCompileInputs.cache
+Z:\C# Advanced\AdvancedC#\Class8\Class_8\obj\Debug\Class_8.exe
+Z:\C# Advanced\AdvancedC#\Class8\Class_8\obj\Debug\Class_8.pdb
