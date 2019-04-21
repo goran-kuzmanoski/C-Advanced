@@ -44,9 +44,9 @@ namespace E_Shop
             };
             List<Vendor> vendors = new List<Vendor>()
             {
-                new Vendor("Tinex",tinexProducts),
-                new Vendor("KAM",kamProducts),
-                new Vendor("Ramstore",ramstoreProducts),
+                new Vendor(1,"Tinex",tinexProducts),
+                new Vendor(2,"KAM",kamProducts),
+                new Vendor(3,"Ramstore",ramstoreProducts),
             };
 
             Person User;
@@ -84,8 +84,51 @@ namespace E_Shop
             if (userChoice == "1")
             {
                 Console.WriteLine("Aviable vendors:");
-                Console.WriteLine($"{vendors.Select(x=>x.Name)}");
-                
+                for (int i = 0; i < vendors.Count(); i++)
+                {
+                    Console.WriteLine($"ID:{i + 1}. {vendors[i].Name}");
+                }
+                Console.WriteLine($"Please choose a vendor ID to see the products");
+                int vendorChoice;
+                bool parsed = int.TryParse(Console.ReadLine(), out vendorChoice);
+                if (parsed)
+                {
+                    var newvendors = vendors.Where(x => x.ID == vendorChoice).ToString();
+                    {
+                        foreach (var vendor in newvendors)
+                        {
+                            Console.WriteLine(vendor);
+                        }
+                    }
+                }
+                else if (userChoice == "2")
+                {
+                    Console.WriteLine("Aviable vendors:");
+                    Console.WriteLine($"{vendors.Select(x => x.Name)}");
+
+                }
+                else if (userChoice == "3")
+                {
+                    Console.WriteLine("Aviable vendors:");
+                    Console.WriteLine($"{vendors.Select(x => x.Name)}");
+
+                }
+                else if (userChoice == "4")
+                {
+                    Console.WriteLine("Aviable vendors:");
+                    Console.WriteLine($"{vendors.Select(x => x.Name)}");
+
+                }
+                else if (userChoice == "5")
+                {
+                    Console.WriteLine("Aviable vendors:");
+                    Console.WriteLine($"{vendors.Select(x => x.Name)}");
+
+                }
+                else
+                {
+                    // continue;
+                }
             }
             //code here
         }

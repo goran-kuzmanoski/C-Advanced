@@ -8,10 +8,12 @@ namespace E_Shop.Classes
 {
     public class Vendor
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public List< Product > Products { get; set; }
-        public Vendor(string name,List<Product> products)
+        public Vendor(int id,string name,List<Product> products)
         {
+            ID = id;
             Name = name;
             Products = products;
         }
