@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\E-shop\E-Shop\bin\Debug\E-Shop.exe.config
+C:\Users\User\Desktop\E-shop\E-Shop\bin\Debug\E-Shop.exe
+C:\Users\User\Desktop\E-shop\E-Shop\bin\Debug\E-Shop.pdb
+C:\Users\User\Desktop\E-shop\E-Shop\obj\Debug\E-Shop.csprojAssemblyReference.cache
+C:\Users\User\Desktop\E-shop\E-Shop\obj\Debug\E-Shop.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\E-shop\E-Shop\obj\Debug\E-Shop.exe
+C:\Users\User\Desktop\E-shop\E-Shop\obj\Debug\E-Shop.pdb
