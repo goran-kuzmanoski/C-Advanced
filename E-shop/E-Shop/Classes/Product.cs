@@ -21,9 +21,10 @@ namespace E_Shop.Classes
             Quantity = quantity;
             Price = price;
         }
-        public void PrintInfo()
+
+        public static void PrintInfo(Product product)
         {
-            Console.WriteLine($"Product name:{Name}, product quantity: {Quantity} , product price: {Price}");
+            Console.WriteLine($"Product name:{product.Name}, product quantity: {product.Quantity} , product price: {product.Price}");
         }
     }
 }

@@ -93,14 +93,26 @@ namespace E_Shop
                 bool parsed = int.TryParse(Console.ReadLine(), out vendorChoice);
                 if (parsed)
                 {
-                    var newvendors = vendors.Where(x => x.ID == vendorChoice).ToString();
+                    var newvendors = vendors.Where(x => x.ID == vendorChoice).ToList();
                     {
                         foreach (var vendor in newvendors)
                         {
-                            Console.WriteLine(vendor);
+                            var vendorProducts = vendor.Products;
+                            PrintInfo(vendorProducts);
                         }
+                     
+                        Console.WriteLine($"Please choose a Product you want to add in your cart by entering the product code");
+                        int productCHoice = int.Parse(Console.ReadLine());
+                        foreach (var vendor in newvendors)
+                        {
+                            var vendorProduct = vendor.Products.Where(x => x.ProductCode.Equals(productCHoice));
+                            Console.WriteLine($"You selected {vendorProduct.Count()}");
+                        }
+
                     }
+                  
                 }
+
                 else if (userChoice == "2")
                 {
                     Console.WriteLine("Aviable vendors:");
@@ -131,6 +143,13 @@ namespace E_Shop
                 }
             }
             //code here
+        }
+        public static void PrintInfo(List<Product> products)
+        {
+            foreach (Product product in products)
+            {
+                Console.WriteLine($"Product Code:{product.ProductCode}, Product name:{product.Name}, product quantity: {product.Quantity} , product price: {product.Price}");
+            }
         }
     }
 }

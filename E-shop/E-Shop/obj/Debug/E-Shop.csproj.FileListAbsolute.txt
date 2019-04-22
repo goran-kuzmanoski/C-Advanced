@@ -5,3 +5,10 @@ C:\Users\User\Desktop\E-shop\E-Shop\obj\Debug\E-Shop.csprojAssemblyReference.cac
 C:\Users\User\Desktop\E-shop\E-Shop\obj\Debug\E-Shop.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\E-shop\E-Shop\obj\Debug\E-Shop.exe
 C:\Users\User\Desktop\E-shop\E-Shop\obj\Debug\E-Shop.pdb
+C:\Users\Goran\Desktop\C-Advanced-master\E-shop\E-Shop\bin\Debug\E-Shop.exe.config
+C:\Users\Goran\Desktop\C-Advanced-master\E-shop\E-Shop\bin\Debug\E-Shop.exe
+C:\Users\Goran\Desktop\C-Advanced-master\E-shop\E-Shop\bin\Debug\E-Shop.pdb
+C:\Users\Goran\Desktop\C-Advanced-master\E-shop\E-Shop\obj\Debug\E-Shop.csprojAssemblyReference.cache
+C:\Users\Goran\Desktop\C-Advanced-master\E-shop\E-Shop\obj\Debug\E-Shop.csproj.CoreCompileInputs.cache
+C:\Users\Goran\Desktop\C-Advanced-master\E-shop\E-Shop\obj\Debug\E-Shop.exe
+C:\Users\Goran\Desktop\C-Advanced-master\E-shop\E-Shop\obj\Debug\E-Shop.pdb
